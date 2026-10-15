@@ -1,7 +1,7 @@
 {
   "dataset": {
-    "title_bn": "বাংলাদেশ ভ্রমণ ও দর্শনীয় স্থান — সম্প্রসারিত একক মাস্টার JSON",
-    "title_en": "Bangladesh Travel & Attractions — Expanded Single Master JSON",
+    "title_bn": "বাংলাদেশ ভ্রমণ ও দর্শনীয় স্থান ",
+    "title_en": "Bangladesh New System- bd_tourism_guide_v3 ",
     "version": "5.0.0",
     "updated_date": "2026-10-15",
     "language": [
@@ -13,7 +13,7 @@
     "total_places": 251,
     "districts_covered": 64,
     "divisions_covered": 8,
-    "purpose_bn": "ব্যক্তিগত ভ্রমণ পরিকল্পনা, ওয়েবসাইট, JSON ডেটাসেট এবং API তৈরির জন্য প্রাথমিক গাইড।",
+    "purpose_bn": "ব্যক্তিগত ভ্রমণ পরিকল্পনা, ওয়েবসাইট প্রাথমিক গাইড।",
     "coverage_warning_bn": "এই সংস্করণে আরও পরিচিত স্থান ও সরকারি পর্যটন-রেফারেন্স থেকে আকর্ষণ যোগ করা হয়েছে। তবুও বাংলাদেশের প্রতিটি ছোট-বড়, মৌসুমি, ব্যক্তিগত বা নতুন পর্যটনস্থানের শতভাগ পূর্ণাঙ্গ তালিকা নয়। GPS, বর্তমান খোলা থাকা, প্রবেশের অনুমতি, নিরাপত্তা, টিকিট, সময় ও ফোনের তথ্য আলাদাভাবে যাচাই না থাকলে সেগুলো অনুমান করে দেওয়া হয়নি।",
     "districts_in_official_directory": 64,
     "data_status": "curated_reference_dataset_not_official_or_exhaustive",
