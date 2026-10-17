@@ -1,0 +1,246 @@
+
+{
+  "app_name": "বাংলাদেশ চাঁদা ক্যালকুলেটর",
+  "app_name_en": "Bangladesh Contribution Calculator",
+  "country": "বাংলাদেশ",
+  "country_code": "BD",
+  "currency": "BDT",
+  "currency_symbol": "৳",
+  "payment_period": "monthly",
+
+  "categories": [
+    {
+      "id": "student",
+      "name": "ছাত্র-ছাত্রী",
+      "monthly_amount": 200
+    },
+    {
+      "id": "parttime_business",
+      "name": "পার্টটাইম ব্যবসায়ী",
+      "monthly_amount": 2500
+    },
+    {
+      "id": "businessman",
+      "name": "ব্যবসায়ী",
+      "monthly_amount": 4500
+    },
+    {
+      "id": "teacher",
+      "name": "শিক্ষক",
+      "monthly_amount": 1500
+    },
+    {
+      "id": "driver",
+      "name": "ড্রাইভার",
+      "monthly_amount": 1010
+    },
+    {
+      "id": "shopkeeper",
+      "name": "দোকানদার",
+      "monthly_amount": 2250
+    },
+    {
+      "id": "full_family",
+      "name": "সম্পূর্ণ পরিবার",
+      "monthly_amount": 7560
+    },
+    {
+      "id": "party_member",
+      "name": "দলের সদস্য",
+      "monthly_amount": 20
+    },
+    {
+      "id": "other_profession",
+      "name": "অন্যান্য পেশা",
+      "monthly_amount": 1200
+    },
+    {
+      "id": "lawyer",
+      "name": "উকিল",
+      "monthly_amount": 3300
+    },
+    {
+      "id": "employee",
+      "name": "কর্মচারী",
+      "monthly_amount": 1180
+    }
+  ],
+
+  "additional_charges": [
+    {
+      "id": "card_management",
+      "name": "কার্ড ও পরিচালনা খরচ",
+      "percentage": 10
+    },
+    {
+      "id": "public_welfare",
+      "name": "বাংলাদেশের বিভিন্ন ভালো কাজের জন্য",
+      "percentage": 10
+    }
+  ],
+
+  "total_additional_percentage": 20,
+
+  "calculator": {
+    "quantity_default": 1,
+    "months_default": 1,
+    "allow_quantity": true,
+    "allow_month_selection": true,
+    "formula": {
+      "base_amount": "monthly_amount * quantity * months",
+      "card_management_fee": "base_amount * 0.10",
+      "public_welfare_fee": "base_amount * 0.10",
+      "total_additional": "card_management_fee + public_welfare_fee",
+      "total_payable": "base_amount + total_additional"
+    }
+  },
+
+  "card_system": {
+    "enabled": true,
+    "card_type": "digital_contribution_card",
+    "card_title": "বাংলাদেশ চাঁদা সদস্য কার্ড",
+    "card_title_en": "Bangladesh Contribution Member Card",
+
+    "logo": "https://raw.githubusercontent.com/Mrbotrx/Json-api/refs/heads/main/Photo/bd_gov_img.png",
+
+    "owner_logo": "https://raw.githubusercontent.com/Mrbotrx/Mrbotrx/refs/heads/main/kbctlogo.png",
+
+    "country_label": "বাংলাদেশ",
+
+    "permission_label": {
+      "text": "বাংলাদেশ অনুমতি",
+      "display": true,
+      "status": "pending_verification",
+      "official_claim": false,
+      "notice": "প্রকৃত সরকারি অনুমোদন যাচাই না হওয়া পর্যন্ত এই লেখা সরকারি অনুমোদনের প্রমাণ হিসেবে গণ্য হবে না।"
+    },
+
+    "card_number": {
+      "enabled": true,
+      "prefix": "BD",
+      "auto_generate": true
+    },
+
+    "member_fields": [
+      {
+        "key": "member_name",
+        "label": "সদস্যের নাম",
+        "required": true
+      },
+      {
+        "key": "card_number",
+        "label": "কার্ড নম্বর",
+        "required": true
+      },
+      {
+        "key": "profession",
+        "label": "পেশা",
+        "required": true
+      },
+      {
+        "key": "monthly_amount",
+        "label": "মূল মাসিক চাঁদা",
+        "required": true
+      },
+      {
+        "key": "card_management_fee",
+        "label": "কার্ড ও পরিচালনা খরচ ১০%",
+        "required": true
+      },
+      {
+        "key": "public_welfare_fee",
+        "label": "জনকল্যাণ তহবিল ১০%",
+        "required": true
+      },
+      {
+        "key": "total_payable",
+        "label": "সর্বমোট মাসিক প্রদেয়",
+        "required": true
+      },
+      {
+        "key": "issue_date",
+        "label": "কার্ড ইস্যুর তারিখ",
+        "required": true
+      },
+      {
+        "key": "expiry_date",
+        "label": "কার্ডের মেয়াদ",
+        "required": false
+      }
+    ],
+
+    "design": {
+      "layout": "horizontal",
+      "width": 856,
+      "height": 540,
+      "show_country": true,
+      "show_logo": true,
+      "show_owner_logo": true,
+      "show_member_name": true,
+      "show_card_number": true,
+      "show_profession": true,
+      "show_monthly_amount": true,
+      "show_fee_breakdown": true,
+      "show_total_payable": true,
+      "show_issue_date": true,
+      "show_expiry_date": true,
+      "show_qr_code": true,
+      "show_signature": false,
+      "show_official_seal": false
+    },
+
+    "qr_code": {
+      "enabled": true,
+      "content": "card_verification_url",
+      "must_use_real_verification": true
+    },
+
+    "export": {
+      "png": true,
+      "jpg": true,
+      "pdf": true,
+      "print": true
+    },
+
+    "security": {
+      "unique_card_number": true,
+      "prevent_duplicate_cards": true,
+      "verification_required": true,
+      "protect_member_information": true
+    }
+  },
+
+  "transparency": {
+    "show_base_amount": true,
+    "show_card_management_fee": true,
+    "show_public_welfare_fee": true,
+    "show_total_additional": true,
+    "show_total_payable": true
+  },
+
+  "legal_compliance": {
+    "country": "বাংলাদেশ",
+    "status": "pending_verification",
+    "notice": "এই কার্ড ডিজাইন বা JSON কোনো সরকারি অনুমোদনের প্রমাণ নয়। সরকারি লোগো, অনুমোদনের দাবি এবং অর্থ সংগ্রহের ব্যবস্থা ব্যবহারের আগে যথাযথ অনুমতি যাচাই করতে হবে।"
+  },
+
+  "accountability": {
+    "require_contributor_consent": true,
+    "keep_payment_records": true,
+    "keep_expense_records": true,
+    "publish_fund_usage_report": true
+  },
+
+  "owner": "King of Kb",
+
+  "telegram": "https://t.me/KBCYBERTEAM",
+
+  "logo": "https://raw.githubusercontent.com/Mrbotrx/Mrbotrx/refs/heads/main/kbctlogo.png",
+
+  "github": "https://github.com/Mrbotrx",
+
+  "partner": [
+    "www.Facebook.com/kallyan.biswas.28",
+    "www.Facebook.com/kallyan.biswas.29"
+  ]
+}
